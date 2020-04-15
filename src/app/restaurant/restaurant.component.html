@@ -47,30 +47,29 @@
 				<hr>
 				<!--Put a loop while fetching the data -->
 				<div  class="card-deck col-md-10 col-sm-12 text-center">
-					<div class="col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="0.9s">
+					<!-- <div class="col-md-4 col-sm-4 wow fadeInUp" *ngFor="lets restaurant of restueants" data-wow-delay="0.9s">
 						<a href = "#">
 							<div class="card">
-							 <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
 							 <img [src] = "imagePath[0]" class = "card-img-top"/>
 							 <div class="card-body">
-							   <h5 class="card-title">Card title</h5>
-							   <p class="card-text">This is a address section</p>
-							   <p class="card-text"><small class="text-muted">One more line added</small></p>
+							   <h5 class="card-title">{{restaurant.restaurantName}}</h5>
+							   <p class="card-text">{{restAddress}}</p>
+							   <p class="card-text"><small class="text-muted">One more line to add comment</small></p>
 							 </div>
 						   </div>
-						   </a>	
-						</div>
+						</a>	
+						</div> -->
 						<div class="col-md-4 col-sm-3 wow fadeInUp" data-wow-delay="0.9s">
 						<a href = "#">
-						 <div class="card">
-						  <img [src] = "imagePath[0]" class = "card-img-top"/>
-						  <div class="card-body">
-							<h5 class="card-title">Card title</h5>
-							<p class="card-text"></p>
-							<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-						  	</div>
+						 	<div class="card">
+						  		<img [src] = "imagePath[0]" class = "card-img-top"/>
+						  		<div class="card-body">
+									<h5 class="card-title">Restaurant Name</h5>
+									<p class="card-text">Address of Restaurant...</p>
+									<p class="card-text"><small class="text-muted">About Restaurant...</small></p>
+						  		</div>
 							</div>
-							</a>						
+						</a>						
 						</div>
 					</div>
 				</div>
