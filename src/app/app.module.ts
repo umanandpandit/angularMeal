@@ -11,6 +11,7 @@ import { MenulistComponent } from './menulist/menulist.component';
 import { RestaurantComponent } from './restaurant/restaurant.component';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
+import { NavComponent } from './nav/nav.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,9 @@ import { RegisterComponent } from './register/register.component';
     MenulistComponent,
     RestaurantComponent,
     HomeComponent,
-    RegisterComponent
+    RegisterComponent,
+    NavComponent,
+
   ],
   imports: [
     BrowserModule,

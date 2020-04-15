@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RestaurantComponent implements OnInit {
 
+  imagePath = [
+    '/assets/images/logo.png'
+  ]
+
   constructor() { }
 
   ngOnInit(): void {

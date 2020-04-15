@@ -192,24 +192,7 @@ body {
     ;
 }
 
-.footer {
-    height: 10vh;
-    background: #000000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-}
-.footer a{
-    padding: 10px;
-    text-decoration: none;
-    color: white;
-}
-.footer a:hover{
-    text-decoration: underline;
-    text-decoration-color: white;
-    text-decoration-style:solid;
-}
+
 .credits{
     display:flex;
     justify-content: flex-end;
@@ -242,4 +225,22 @@ body {
         height: 16em;
         width: 16em;
     }
+}
+.footer {
+    height: 10vh;
+    background: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.footer a{
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+}
+.footer a:hover{
+    text-decoration: underline;
+    text-decoration-color: white;
+    text-decoration-style:solid;
 }
