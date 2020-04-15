@@ -9,6 +9,7 @@ export class Customer {
         public password : string,
         public cnfPassword: string,
         public address: string,
+        public city : string,
         public pin: string,
         
         ) { }

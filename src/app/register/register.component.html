@@ -24,7 +24,7 @@
         <input type="password" id="password" name="password" [(ngModel)]="model.password" required tabindex="4">
         
         <p class="contact"><label for="password">Enter a password</label></p>
-        <input type="password" id="password" name="password" [(ngModel)]="model.cnfpassword" required tabindex="4">
+        <input type="password" id="password" name="password" [(ngModel)]="model.cnfPassword" required tabindex="4">
 
         <p class="contact"><label for="phone">Mobile phone</label></p>
         <input id="phone" name="phoneNo" placeholder="phone number" pattern="[0-9]{10}" title="Enter 10 digit mobile number" placeholder="Enter Phone Number" [(ngModel)]="model.phone" required type="tel">
@@ -55,9 +55,11 @@
             <label for="restaurant">Register as Restaurant</label><br>
         </div>
         <br>
-        <input class="buttom" name="submit" id="submit" tabindex="9" value="Sign me up!" type="submit"> 
-    
+        <input class="buttom" name="submit" id="submit" tabindex="9" value="Sign me up!" type="submit">
 
         <p>Already have an Account  <a href="/login" >Go to Login </a></p>
+        </form>
+        </div>
     </div>
+        </div>
 </div>

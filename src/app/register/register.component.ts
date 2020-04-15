@@ -11,7 +11,7 @@ export class RegisterComponent implements OnInit {
 
   cities = ['Ahmedabad, Bangalore, Chennai, Delhi, Hyderabad, Kolkata, Mumbai, Pune'];
 
-  model = new Customer('','','','','','','','');
+  model = new Customer('','','','','','','','','');
 
   submitted = false;
 
