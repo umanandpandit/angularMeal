@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
 import{ Customer } from '../customer';
+
+
 
 @Component({
   selector: 'app-register',
@@ -8,6 +9,10 @@ import{ Customer } from '../customer';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
+
+  imagePath = [
+    '/assets/images/image1.jpeg',
+  ];
 
   cities = ['Ahmedabad, Bangalore, Chennai, Delhi, Hyderabad, Kolkata, Mumbai, Pune'];
 
