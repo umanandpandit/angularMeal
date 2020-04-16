@@ -7,12 +7,13 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
 import { CartComponent } from './cart/cart.component';
-import { MenulistComponent } from './menulist/menulist.component';
+// import { MenulistComponent } from './menulist/menulist.component';
 import { RestaurantComponent } from './restaurant/restaurant.component';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -20,12 +21,13 @@ import { FooterComponent } from './footer/footer.component';
     LoginComponent,
     LogoutComponent,
     CartComponent,
-    MenulistComponent,
+    // MenulistComponent,
     RestaurantComponent,
     HomeComponent,
     RegisterComponent,
     NavComponent,
     FooterComponent,
+    MenuComponent,
 
   ],
   imports: [

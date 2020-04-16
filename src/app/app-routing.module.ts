@@ -7,7 +7,7 @@ import { RestaurantComponent } from './restaurant/restaurant.component';
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
 import { RegisterComponent } from './register/register.component';
-import { MenulistComponent } from './menulist/menulist.component'
+import { MenuComponent } from './menu/menu.component'
 
 
 const routes: Routes = [ 
@@ -16,7 +16,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent},
   { path: 'register', component: RegisterComponent},
   { path: 'logout', component: LogoutComponent} ,
-  { path: 'menu', component:MenulistComponent},
+  { path: 'menu', component:MenuComponent},
 ];
 
 @NgModule({
