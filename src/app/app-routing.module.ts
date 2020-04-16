@@ -7,7 +7,8 @@ import { RestaurantComponent } from './restaurant/restaurant.component';
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
 import { RegisterComponent } from './register/register.component';
-import { MenuComponent } from './menu/menu.component'
+import { MenuComponent } from './menu/menu.component';
+import { CartComponent } from './cart/cart.component';
 
 
 const routes: Routes = [ 
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent},
   { path: 'logout', component: LogoutComponent} ,
   { path: 'menu', component:MenuComponent},
+  { path: 'cart', component:CartComponent},
 ];
 
 @NgModule({
