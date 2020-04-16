@@ -8,7 +8,7 @@ position: relative;
 }
 
 .heading {
-font-size: 22px;
+font-size: 32px;
 font-weight: 500;
 }
 
@@ -28,14 +28,6 @@ line-height: 28px;
 hr {
 border-top: 2px solid #828282;
 width: 120px;
-}
-
-#menu, #cuisine {
-padding-top: 100px;
-padding-bottom: 100px;
-}
-#menu, #contact {
-background: #f0f0f0;
 }
 
 .parallax-section {
@@ -118,7 +110,7 @@ color: white;
 
 /* home section */
 #home {
-background: url('/assets/images/gallery-img5.jpg') 50% 0 repeat-y fixed;
+background: url('/assets/images/gallery-img4.jpg') 50% 0 repeat-y fixed;
 -webkit-background-size: cover;
 background-size: cover;
 background-position: center;
@@ -170,90 +162,41 @@ height:63px;
 }
 
 
-/* cuisine section */
-#cuisine {
-padding-top: 80px;
-padding-bottom: 80px;
-}
-#cuisine .col-md-4 {
-padding-top: 52px;
-}
-#cuisine img {
-width: 100%;
-padding-bottom: 18px;
-}
-#cuisine .col-md-4 div {
-position: relative;
-bottom: 18px;
-padding-bottom: 12px;
-}
-#cuisine h3 {
-font-size: 18px;
-line-height: 8px;
-}
 
 /* restaurant */
 
 #restaurant{
     padding-top: 80px;
     padding-bottom: 80px;
-
+    /* margin-left: 180px; */
 }
 #restaurant .card{
     height: 400px;
     width: 250px;
     padding-bottom: 10px;
-    margin: 30px 30px;
+    margin-top:50px;
 }
 #restaurant .card:hover{
     text-decoration: none;
     
+    
 }
 
-
-/* 
-#restaurant .col-md-4 {
-    padding-top: 50px;   
-    position: relative;
-    float: left;
-    width: 25%;
-    padding: 0 10px;
-}  */
-
-/* contact section */
-#contact {
-padding-top: 80px;
-padding-bottom: 100px;
+.footer {
+    height: 10vh;
+    background: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
 }
-#contact .col-md-8 {
-margin-bottom: 32px;
+.footer a{
+    padding: 10px;
+    text-decoration: none;
+    color: white;
 }
-#contact .form-control {
-background: #ffffff;
-border: none;
-border-radius: 0;
-box-shadow: none;
-margin-top: 10px;
-margin-bottom: 10px;
-transition: all 0.4s ease-in-out;
+.footer a:hover{
+    text-decoration: underline;
+    text-decoration-color: white;
+    text-decoration-style:solid;
 }
-#contact .form-control:focus {
-border-color: #f9f9f9;
-}
-#contact input {
-height: 48px;
-}
-#contact input[type="submit"] {
-background: transparent;
-border: 2px solid #999;
-border-radius: 10px;
-letter-spacing: 2px;
-margin-top: 12px;
-height: 50px;
-}
-#contact input[type="submit"]:hover {
-background: #999;
-color: #ffffff;
-}
-
-

@@ -12,6 +12,7 @@ import { RestaurantComponent } from './restaurant/restaurant.component';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { NavComponent } from './nav/nav.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { NavComponent } from './nav/nav.component';
     HomeComponent,
     RegisterComponent,
     NavComponent,
+    FooterComponent,
 
   ],
   imports: [

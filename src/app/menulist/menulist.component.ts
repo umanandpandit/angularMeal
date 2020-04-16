@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenulistComponent implements OnInit {
 
+  imagePath = "asserts/images/logo.png";
+
   constructor() { }
 
   ngOnInit(): void {
