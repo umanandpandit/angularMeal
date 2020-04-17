@@ -1,0 +1,24 @@
+
+<h2>{{userName}}</h2>
+
+<hr/>
+<div *ngIf="user">
+<div>
+<label><b>Name: </b></label> {{customer.name}}
+</div>
+<div>
+<label><b>Email: </b></label> {{customer.email}}
+</div>
+<div>
+<label><b>Phone Number </b></label> {{customer.phone}}
+</div>
+<div>
+<label><b>Address:</b></label><br>
+<label><b>Street: </b></label> {{customer.address}}
+<label><b>City: </b></label> {{customer.city}}
+<label><b>Pin Code:</b></label> {{customer.pin}}
+</div>
+<br>
+<br>
+<button [routerLink]="['../update-user-profile']" class="btn btn-primary">Update Profile</button><br>
+<button [routerLink]="['../login']" class="btn btn-primary">Back To Home</button><br>
