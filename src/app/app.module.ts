@@ -16,6 +16,7 @@ import { FooterComponent } from './footer/footer.component';
 import { MenuComponent } from './menu/menu.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { UpdateUserProfileComponent } from './update-user-profile/update-user-profile.component';
+import { ThankyouComponent } from './thankyou/thankyou.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { UpdateUserProfileComponent } from './update-user-profile/update-user-pr
     MenuComponent,
     UserDetailsComponent,
     UpdateUserProfileComponent,
+    ThankyouComponent,
 
   ],
   imports: [
