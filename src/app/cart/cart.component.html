@@ -47,153 +47,90 @@
 <!-- cart-->
 
 <section id="cart" class="parallax-section">
-	<div class="container">
-		<ng-container *ngIf="empty">
-  <div *ngIf="!customEmptyContent" class="cart-view-empty">
-    {{emptyText}}
-  </div>
-  <ng-content *ngIf="customEmptyContent"></ng-content>
-</ng-container>
-<ng-container *ngIf="!empty">
-  <ng-container *ngIf="display !== 'table'">
-    <div *ngIf="!empty" class="cart-view" [ngClass]="display + '-display'">
-      <div class="cart-list-view" [ngClass]="{'no-images': !images}">
-        <div class="cart-list-header">
-          <div class="cart-list-header-value cart-list-image-header">
-          </div>
-          <div class="cart-list-header-value cart-list-name-header">
-            {{nameHeaderText}}
-          </div>
-          <div class="cart-list-header-value cart-list-quantity-header">
-            {{quantityHeaderText}}
-          </div>
-          <div class="cart-list-header-value cart-list-price-header">
-            {{priceHeaderText}}
-          </div>
-          <div class="cart-list-header-value cart-list-total-header">
-            {{totalHeaderText}}
-          </div>
+    
+    <div class="container">
+		
+<div [ngClass]="{bg:!isCart()}">
+    <div *ngIf="!isCart()">
+        <div>
+            <ion-icon class="empty-cart" name="cart"></ion-icon>
         </div>
-        <div *ngFor="let cartItem of items" class="cart-list-item">
-          <div class="cart-list-value cart-list-image-value"
-               [ngStyle]="{'background-image': 'url(' + cartItem.getImage() + ')'}">
-          </div>
-          <div class="cart-list-value cart-list-name-value">
-            {{cartItem.getName()}}
-          </div>
-          <div class="cart-list-value cart-list-quantity-value">
-            <button type="button" class="cart-increase-button" (click)="increase(cartItem)">
-              +
-            </button>
-            <span class="cart-list-quantity-content">{{cartItem.getQuantity()}}</span>
-            <button type="button" class="cart-decrease-button" (click)="decrease(cartItem)">
-              -
-            </button>
-          </div>
-          <div class="cart-list-value cart-list-price-value">
-            {{cartItem.getPrice() | currency:format.currencyCode:format.display:format.digitsInfo:format.locale}}
-          </div>
-          <div class="cart-list-value cart-list-total-value">
-            {{cartItem.total() | currency:format.currencyCode:format.display:format.digitsInfo:format.locale}}
-          </div>
-        </div>
-        <div class="cart-list-footer">
-          <div class="cart-list-summary">
-            <div class="cart-empty-summary" *ngIf="images"></div>
-            <div class="cart-empty-summary"></div>
-            <div class="cart-empty-summary"></div>
-            <div class="cart-empty-summary"></div>
-            <div class="cart-tax-summary">
-              {{taxFooterText}}: ({{taxRate | percent:format.digitsInfo:format.locale}})
-              {{tax | currency:format.currencyCode:format.display:format.digitsInfo:format.locale}}
-            </div>
-          </div>
-          <div class="cart-list-summary">
-            <div class="cart-empty-summary" *ngIf="images"></div>
-            <div class="cart-empty-summary"></div>
-            <div class="cart-empty-summary"></div>
-            <div class="cart-empty-summary"></div>
-            <div class="cart-shipping-summary">
-              {{shippingFooterText}}:
-              {{shipping | currency:format.currencyCode:format.display:format.digitsInfo:format.locale}}
-            </div>
-          </div>
-          <div class="cart-list-summary">
-            <div class="cart-empty-summary" *ngIf="images"></div>
-            <div class="cart-empty-summary"></div>
-            <div class="cart-empty-summary"></div>
-            <div class="cart-empty-summary"></div>
-            <div class="cart-total-summary">
-              {{totalFooterText}}:
-              {{cost | currency:format.currencyCode:format.display:format.digitsInfo:format.locale}}
-            </div>
-          </div>
-        </div>
-      </div>
+        <h4>Your Cart is empty!</h4>
+        <button class="empty-btn" (click)="gotorestaurants()">{{'Add Items' | translate}}</button>
     </div>
-  </ng-container>
-  <ng-container *ngIf="display === 'table'">
-    <table class="cart-view table-display">
-      <thead class="cart-list-header">
-      <tr>
-        <th class="cart-list-header-value cart-list-image-header" *ngIf="images"></th>
-        <th class="cart-list-header-value cart-list-name-header">{{nameHeaderText}}</th>
-        <th class="cart-list-header-value cart-list-quantity-header">{{quantityHeaderText}}</th>
-        <th class="cart-list-header-value cart-list-price-header">{{priceHeaderText}}</th>
-        <th class="cart-list-header-value cart-list-total-header">{{totalHeaderText}}</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr *ngFor="let cartItem of items">
-        <td class="cart-list-value cart-list-image-value" *ngIf="images"
-            [ngStyle]="{'background-image': 'url(' + cartItem.getImage() + ')'}">
-        </td>
-        <td class="cart-list-value cart-list-name-value">{{cartItem.getName()}}</td>
-        <td class="cart-list-value cart-list-quantity-value">
-          <button type="button" class="cart-increase-button" (click)="increase(cartItem)">
-            +
-          </button>
-          <span class="cart-list-quantity-content">{{cartItem.getQuantity()}}</span>
-          <button type="button" class="cart-decrease-button" (click)="decrease(cartItem)">
-            -
-          </button>
-        </td>
-        <td class="cart-list-value cart-list-price-value">
-          {{cartItem.getPrice() | currency:format.currencyCode:format.display:format.digitsInfo:format.locale}}
-        </td>
-        <td class="cart-list-value cart-list-total-value">
-          {{cartItem.total() | currency:format.currencyCode:format.display:format.digitsInfo:format.locale}}
-        </td>
-      </tr>
-      </tbody>
-      <tfoot class="cart-list-footer">
-      <tr class="cart-list-summary">
-        <td [attr.colspan]="images ? 4 : 3" class="cart-empty-summary"></td>
-        <td class="cart-tax-summary">
-          {{taxFooterText}}: ({{taxRate | percent:format.digitsInfo:format.locale}})
-          {{tax | currency:format.currencyCode:format.display:format.digitsInfo:format.locale}}
-        </td>
-      </tr>
-      <tr class="cart-list-summary">
-        <td [attr.colspan]="images ? 4 : 3" class="cart-empty-summary"></td>
-        <td class="cart-shipping-summary">
-          {{shippingFooterText}}:
-          {{shipping | currency:format.currencyCode:format.display:format.digitsInfo:format.locale}}
-        </td>
-      </tr>
-      <tr class="cart-list-summary">
-        <td [attr.colspan]="images ? 4 : 3" class="cart-empty-summary"></td>
-        <td class="cart-total-summary">
-          {{totalFooterText}}:
-          {{cost | currency:format.currencyCode:format.display:format.digitsInfo:format.locale}}
-        </td>
-      </tr>
-      </tfoot>
-    </table>
-  </ng-container>
-</ng-container>
+    
+	<div *ngIf="isCart()">
+	<table>
+        <div class="cart-list" *ngFor="let data of Cart">
+            <!-- item-list -->
+            <div class="cart-item">
+                <!-- item -->
+                <div class="full">
+                    <div class="img">
+                        <!-- col-for item-image and details -->
+                        <tr>
+                            <td>
+                                <!-- item-image -->
+                                <img [src]="imagePath" alt="">
+                            <td>
+                            <tr>
+                                <p class="item-name" text-wrap>{{data.item.title}}</p>
+                                <p class="item-detail" text-wrap>{{"Quantity:" | translate}} {{data.item.itemQunatity}}</p>
+                                <p class="item-detail" text-wrap>{{"Size:" | translate}} {{data?.item?.price?.pname}}</p>
+                                    <p class="item-detail">Price:
+                                        <span class="item-price">
+                                            <strong class="cut"> {{currency?.currencySymbol}}{{data.item.price.value | number:'.2-2'}}</strong>
+                                        </span>
+                                    </p>
+                                
+                                <!-- row-for count item -->
+
+                               
+                                    <!-- row-for count item -->
+                                    <td>
+
+                                        <div class="count">
+                                            <span class="item-count" (click)="remove(data)">
+                                                -
+                                            </span>
+                                            <span class="item-count show-count">
+                                                {{data.item.itemQunatity}}
+                                            </span>
+                                            <span class="item-count" (click)="add(data)">
+                                                +
+                                            </span>
+                                        </div>
+									</td>
+                                
+                                    <td>
+                                        <ion-icon name="trash" (click)="deleteItem(data)"></ion-icon>
+                                    </td>
+                                
+                            </tr>
+                        </tr>
+                    </div>
+                </div>
+            </div>
         </div>
-	</div>
+        <tr class="price-details">
+            <td class="calculate" col-12>
+                <div class="cart-total">
+                    <strong>{{"Order Total" | translate}}</strong>
+                    <span class="price"> {{currency?.currencySymbol}} {{GrandTotal | number:'.2-2'}}</span>
+                </div>
+            </td>
+        </tr>
+        <!-- row-bill-details -->
+        <!-- continue button -->
+        <tr>
+            <td>
+                <button  class="continue-btn" (click)="nav()">{{"Continue"| translate}}</button>
+            </td>
+        </tr>
+	</table>
+    </div>
+    </div>
+</div>
 </section>
 
 <app-footer></app-footer>
