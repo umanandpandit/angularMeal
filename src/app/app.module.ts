@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
 import { CartComponent } from './cart/cart.component';
-// import { MenulistComponent } from './menulist/menulist.component';
 import { RestaurantComponent } from './restaurant/restaurant.component';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
@@ -17,6 +16,16 @@ import { MenuComponent } from './menu/menu.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { UpdateUserProfileComponent } from './update-user-profile/update-user-profile.component';
 import { ThankyouComponent } from './thankyou/thankyou.component';
+import { RestaurantadminComponent } from './restaurantadmin/restaurantadmin.component';
+import { AddfoodComponent } from './addfood/addfood.component';
+import { UpdatefoodComponent } from './updatefood/updatefood.component';
+import { DeletefoodComponent } from './deletefood/deletefood.component';
+import { AddcustomerComponent } from './addcustomer/addcustomer.component';
+import { AddrestaurantComponent } from './addrestaurant/addrestaurant.component';
+import { UpdaterestaurantComponent } from './updaterestaurant/updaterestaurant.component';
+import { UpdatecustomerComponent } from './updatecustomer/updatecustomer.component';
+import { RestaurantprofileComponent } from './restaurantprofile/restaurantprofile.component';
+import { FooddetailsComponent } from './fooddetails/fooddetails.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +33,6 @@ import { ThankyouComponent } from './thankyou/thankyou.component';
     LoginComponent,
     LogoutComponent,
     CartComponent,
-    // MenulistComponent,
     RestaurantComponent,
     HomeComponent,
     RegisterComponent,
@@ -34,6 +42,16 @@ import { ThankyouComponent } from './thankyou/thankyou.component';
     UserDetailsComponent,
     UpdateUserProfileComponent,
     ThankyouComponent,
+    RestaurantadminComponent,
+    AddfoodComponent,
+    UpdatefoodComponent,
+    DeletefoodComponent,
+    AddcustomerComponent,
+    AddrestaurantComponent,
+    UpdaterestaurantComponent,
+    UpdatecustomerComponent,
+    RestaurantprofileComponent,
+    FooddetailsComponent,
 
   ],
   imports: [

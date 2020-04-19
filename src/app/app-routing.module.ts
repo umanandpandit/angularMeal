@@ -9,9 +9,10 @@ import { LogoutComponent } from './logout/logout.component';
 import { RegisterComponent } from './register/register.component';
 import { MenuComponent } from './menu/menu.component';
 import { CartComponent } from './cart/cart.component';
-import { UserDetailsComponent } from './user-details/user-details.component';
-import { UpdateUserProfileComponent } from './update-user-profile/update-user-profile.component'
-
+import { UserprofileComponent } from './user-profile/user-profile.component';
+import { UpdateUserProfileComponent } from './update-user-profile/update-user-profile.component';
+import { RestaurantadminComponent } from './restaurantadmin/restaurantadmin.component';
+ 
 
 const routes: Routes = [ 
   { path: '', component: HomeComponent},
@@ -21,8 +22,8 @@ const routes: Routes = [
   { path: 'logout', component: LogoutComponent} ,
   { path: 'menu', component:MenuComponent},
   { path: 'cart', component:CartComponent},
-  { path: 'userdetails', component:UserDetailsComponent },
-  { path: 'updateprofile', component:UpdateUserProfileComponent}
+  { path: 'userprofile', component:UserprofileComponent },
+  { path: 'updatecustomerprofile', component:UpdateUserProfileComponent},
 ];
 
 @NgModule({
