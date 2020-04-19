@@ -26,6 +26,8 @@ import { UpdaterestaurantComponent } from './updaterestaurant/updaterestaurant.c
 import { UpdatecustomerComponent } from './updatecustomer/updatecustomer.component';
 import { RestaurantprofileComponent } from './restaurantprofile/restaurantprofile.component';
 import { FooddetailsComponent } from './fooddetails/fooddetails.component';
+import { UpdateRestaurantProfileComponent } from './update-restaurant-profile/update-restaurant-profile.component';
+import { RestnavComponent } from './restnav/restnav.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +54,8 @@ import { FooddetailsComponent } from './fooddetails/fooddetails.component';
     UpdatecustomerComponent,
     RestaurantprofileComponent,
     FooddetailsComponent,
+    UpdateRestaurantProfileComponent,
+    RestnavComponent,
 
   ],
   imports: [

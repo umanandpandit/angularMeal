@@ -4,9 +4,9 @@ import { finalize } from "rxjs/operators";
 // import { ImageService } from 'src/app/shared/image.service'; 
 
 @Component({
-  selector: 'app-addfood',
-  templateUrl: './addfood.component.html',
-  styleUrls: ['./addfood.component.css']
+  selector: 'app-update-restaurant-profile',
+  templateUrl: './update-restaurant-profile.component.html',
+  styleUrls: ['./update-restaurant-profile.component.css']
 })
 export class RestaurantprofileComponent implements OnInit {
 
